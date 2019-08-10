@@ -15,4 +15,4 @@ after_success:
  - coveralls
 notifications:
   webhooks:
-    - https://stripe-cer-testing.herokuapp.com/api/v1/challenge/check_builds/
+    - http://127.0.0.1:8000/api/v1/challenge/check_builds/
