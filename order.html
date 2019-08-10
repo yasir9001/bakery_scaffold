@@ -55,6 +55,8 @@
             $('#btn-checkout').on('click', () => {
                 var STRIPE_KEY = process.env.STRIPE_API_KEY
                 // Here Goes your Stripe Logic
+                  successUrl: 'https://example.com/order_success.html'
+                  cancelUrl: 'https://example.com/order.html'
             })
         })
   
