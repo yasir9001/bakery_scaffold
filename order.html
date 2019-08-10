@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checkout</title>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+
+        .box {
+            display: flex;
+            display: inline-block;
+            background-color: white;
+            min-height: 50%;
+            position: relative;
+            width: 69%;
+            padding: 15px;
+            border-radius: 15px;
+        }
+        .btn-primary {
+            background-color: #556cd6;
+            border-color: #556cd6;
+        }
+
+    </style>
+</head>
+
+<body style="background-color: whitesmoke">
+
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">Stripe</span>
+    </nav>
+
+    <div style="text-align: center; margin-top: 10px;">
+        <div class="box">
+            <h3>Checkout Form</h3>
+            <div class="card" style="width: 18rem;">
+                <img src="./img/cupcake.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Cupcake</h5>
+                    <p class="card-text">$3.25</p>
+                </div>
+            </div>
+            <button class="btn btn-primary" id="btn-checkout"
+                style="float: right; position: absolute; right: 0; bottom: 0; margin: 2em;">Checkout</button>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $('#btn-checkout').on('click', () => {
+                var STRIPE_KEY = process.env.STRIPE_API_KEY
+                // Here Goes your Stripe Logic
+            })
+        })
+  
+    </script>
+
+</body>
+</html>
